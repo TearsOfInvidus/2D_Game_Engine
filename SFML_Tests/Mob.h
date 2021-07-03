@@ -1,33 +1,45 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <string>
+#include "math.h"
 
 
 class Mob
 {
 private:
 
-	float x, y;
+   
+    sf::Vector2f m_Position;  // Позиция Боба
+
+    sf::Sprite m_Sprite;
+
+    sf::Texture m_Texture;
+
+    bool m_LeftPressed;
+    bool m_RightPressed;
+    bool m_UpPressed;
+    bool m_DownPressed;
+
+    
+    float m_Speed;// Скорость Боба в пикселях в секунду
 
 public:
-	
-	float dx, dy, speed = 0;
-	int w, h;
 
-	int dir = 0;
-	float frame = 0;
+    Mob();
+    
+    sf::Sprite getSprite();// Для отправки спрайта в главную функцию
+ 
+    void moveLeft();// Для движения Боба
+    void moveRight();
+    void moveUp();
+    void moveDown();
 
+    
+    void stopLeft();// Прекращение движения
+    void stopRight();
+    void stopUp();
+    void stopDown();
 
-	std::string file;
-	sf::Image image;
-	sf::Texture texture;
-	sf::Sprite sprite;
+    void update(float elapsedTime);// Эта функция будет вызываться на каждый кадр
 
-	Mob(std::string f , float X, float Y, int W, int H);
-
-
-	void update(float time);
-	float getMobCoordinateX();
-	float getMobCoordinateY();
 };
 

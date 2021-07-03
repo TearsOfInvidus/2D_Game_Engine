@@ -23,11 +23,13 @@ public:
 	sf::Texture texture;
 	sf::Sprite sprite;
 
+	Mob();
 	Mob(std::string f , float X, float Y, int W, int H);
 
 
 	void update(float time);
 	float getMobCoordinateX();
 	float getMobCoordinateY();
+	sf::Sprite getSprite();
 };
 

@@ -1,18 +1,5 @@
 #include "Mob.h"
 
-Mob::Mob(std::string F, float X, float Y, int W, int H)
-{
-	file = F;
-	w = W; h = H;
-	x = X; y = Y;
-
-	image.loadFromFile("img/" + file);
-	texture.loadFromImage(image);
-	sprite.setTexture(texture);
-
-	sprite.setTextureRect(sf::IntRect(32*3, 0, W, H));
-}
-
 void Mob::update(float time)
 {
 
@@ -45,4 +32,9 @@ float Mob::getMobCoordinateX()
 float Mob::getMobCoordinateY()
 {
 	return y;
+}
+
+sf::Sprite Mob::getSprite()
+{
+	return sprite;
 }

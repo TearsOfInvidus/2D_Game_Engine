@@ -16,12 +16,30 @@
     <Filter Include="Исходные файлы\Mobs">
       <UniqueIdentifier>{0dfedb40-8982-44a2-9ce5-4c60a03dc8db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Engine">
+      <UniqueIdentifier>{786eb9d9-d464-4a51-a367-f6a2c91bff31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Mob.cpp">
+    <ClCompile Include="Engine.cpp">
+      <Filter>Исходные файлы\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="update.cpp">
+      <Filter>Исходные файлы\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>Исходные файлы\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="draw.cpp">
+      <Filter>Исходные файлы\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Mob_Functions.cpp">
+      <Filter>Исходные файлы\Mobs</Filter>
+    </ClCompile>
+    <ClCompile Include="Mob_Constructors.cpp">
       <Filter>Исходные файлы\Mobs</Filter>
     </ClCompile>
   </ItemGroup>
@@ -30,6 +48,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="view.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
